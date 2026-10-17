@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "admin.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/admin/:match*",
+      "destination": "/admin.js"
+    },
+    {
+      "source": "/api/admin",
+      "destination": "/admin.js"
+    },
+    {
+      "source": "/admin/:match*",
+      "destination": "/admin.js"
+    },
+    {
+      "source": "/admin",
+      "destination": "/admin.js"
+    },
+    {
+      "source": "/api/:match*",
+      "destination": "/index.js"
+    },
+    {
+      "source": "/api",
+      "destination": "/index.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.js"
+    }
+  ]
+}
