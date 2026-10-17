@@ -1,0 +1,16 @@
+{
+  "name": "smilenest-dental-booking",
+  "version": "1.0.0",
+  "description": "Full-stack online dental clinic booking system with premium claymorphism UI",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
+  "dependencies": {
+    "mongodb": "^6.5.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
